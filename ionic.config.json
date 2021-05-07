@@ -1,0 +1,7 @@
+{
+  "name": "tmone",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
