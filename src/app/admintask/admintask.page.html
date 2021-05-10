@@ -1,0 +1,27 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary" class="toolbar">
+    <ion-buttons slot="start" size="large">
+      <ion-menu-button autoHide="false">
+        <ion-icon src="../../assets/icon/menu.svg" style="color: white;"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title><b>Tasks</b></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <br>
+    <h3 style="text-align: center; color: #00c22a;">Select Team</h3>
+
+    <ion-list>
+      <ion-card  *ngFor="let item of teams" [routerLink]="['detailtask']" (click)="sendTeamName(item.selected_team)">
+        <ion-card-header>
+          <ion-card-title style="color: #00c22a;">{{item.selected_team}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <h4 >{{item.contractorName}}</h4>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+</ion-content>

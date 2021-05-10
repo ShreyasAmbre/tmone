@@ -1,0 +1,68 @@
+<ion-content>
+  <br>
+  <form #teamForm="ngForm" (ngSubmit)="addTeam(teamForm.value)">
+    <h3 style="text-align: center; color: #00c22a;">Contractor Details</h3>
+    <ion-item class="inputitem">
+      <ion-label position="floating">Select Team*</ion-label>
+      <ion-select [(ngModel)]="selected_team" name="selected_team"  okText="Okay" cancelText="Dismiss">
+        <ion-select-option class="option" value="Survery & Marketing">Survey & Marking Team</ion-select-option>
+        <ion-select-option class="option" value="Foundation Team (Digging)">Foundation Team (Digging)</ion-select-option>
+        <ion-select-option class="option" value="Foundation Team (Civil Work)">Foundation Team (Civil Work)</ion-select-option>
+        <ion-select-option class="option" value="Errection Team">Errection Team</ion-select-option>
+        <ion-select-option class="option" value="Bed Preparation & Irregation Team">Bed Preparation & Irregation Team</ion-select-option>
+        <ion-select-option class="option" value="Platation ">Platation Team</ion-select-option>
+        <ion-select-option class="option" value="Handover Team">Handover Team</ion-select-option>
+        <ion-select-option class="option" value="Agronomy & Plant Supervision Team">Agronomy & Plant Supervision Team</ion-select-option>
+
+      </ion-select>
+    </ion-item>
+    <ion-item class="inputitem">
+      <ion-label position="floating">Team Selected*</ion-label>
+      <ion-input type="text" ngModel name="selected_team" [value]="this.selected_team" ></ion-input>
+    </ion-item>
+    <ion-item class="inputitem">
+      <ion-label position="floating">Contractor Name*</ion-label>
+      <ion-input type="text" ngModel name="contractorName" ></ion-input>
+    </ion-item>
+    <ion-item class="inputitem">
+      <ion-label position="floating">Contractor Address*</ion-label>
+      <ion-input type="text" ngModel name="contractorAddress"  ></ion-input>
+    </ion-item>
+    <ion-item class="inputitem">
+      <ion-label position="floating">Contractor Mobile no.*</ion-label>
+      <ion-input type="number" ngModel name="contractorMobileno"   ></ion-input>
+    </ion-item>
+    <ion-item class="inputitem">
+      <ion-label position="floating">PAN*</ion-label>
+      <ion-input type="text" ngModel name="pan" ></ion-input>
+    </ion-item>
+    <ion-item class="inputitem">
+      <ion-label position="floating">Aadhar*</ion-label>
+      <ion-input type="number" ngModel name="aadhar"  ></ion-input>
+    </ion-item>
+    <ion-item class="inputitem">
+      <ion-label position="floating">Additional Details*</ion-label>
+      <ion-input type="text" ngModel name="additionaldetials"  ></ion-input>
+    </ion-item><br>
+
+    <h3 style="text-align: center; color: #00c22a;">Bank Account Details</h3>
+    <ion-item class="inputitem">
+      <ion-label position="floating">Bank Name*</ion-label>
+      <ion-input type="text" ngModel name="bankName"   ></ion-input>
+    </ion-item>
+    <ion-item class="inputitem">
+      <ion-label position="floating">Account Holder Name*</ion-label>
+      <ion-input type="text" ngModel name="accountHolderName" ></ion-input>
+    </ion-item>
+    <ion-item class="inputitem">
+      <ion-label position="floating">Account No.</ion-label>
+      <ion-input type="number" ngModel name="accountNo"  ></ion-input>
+    </ion-item>
+    <ion-item class="inputitem">
+      <ion-label position="floating">IFSC Code*</ion-label>
+      <ion-input type="text" ngModel name="ifscCode"  ></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" expand="block" ><b>Submit</b></ion-button>
+  </form>
+</ion-content>

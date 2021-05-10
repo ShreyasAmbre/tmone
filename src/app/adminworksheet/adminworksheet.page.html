@@ -1,0 +1,76 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary" class="toolbar">
+    <ion-buttons slot="start" size="large">
+      <ion-menu-button autoHide="false">
+        <ion-icon src="../../assets/icon/menu.svg" style="color: white;"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title><b>Worksheet</b></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <br>
+    <ion-card-content *ngFor="let item of teams">
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title style="color: #00c22a;">
+              {{item.selected_team}}
+            </mat-panel-title>
+            <mat-panel-description>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div>
+            <table class="table table-striped " style="text-align: left;">
+              <tbody>
+                <tr>
+                  <th>Contractor Name</th>
+                  <td>{{item.contractorName}}</td>
+                </tr>
+                <tr>
+                  <th>Contractor Mobile no.:</th>
+                  <td>+91 {{item.contractorMobileno}}</td>
+                </tr>
+                <tr>
+                  <th>PAN:</th>
+                  <td>{{item.pan}}</td>
+                </tr>
+                <tr>
+                  <th>Aadhar No.:</th>
+                  <td> {{item.aadhar}}</td>
+                </tr>
+                <tr>
+                  <th>Additional Details:</th>
+                  <td>{{item.additionaldetials}}</td>
+                </tr>
+                <tr>
+                  <th>Bank Name:</th>
+                  <td> {{item.bankName}} </td>
+                </tr>
+                <tr>
+                  <th>Acc. Holder Name:</th>
+                  <td>{{item.accountHolderName}}</td>
+                </tr>
+                <tr>
+                  <th>Acc. No.:</th>
+                  <td> {{item.accountNo}} </td>
+                </tr>
+                <tr>
+                  <th>IFSC COde:</th>
+                  <td>{{item.ifscCode}}</td>
+                </tr>
+                <tr>
+                  <th>Contractor Address:</th>
+                  <td>{{item.contractorAddress}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </mat-expansion-panel><br>
+      </mat-accordion>
+    </ion-card-content>
+
+</ion-content>
+
